@@ -1,0 +1,48 @@
+# --- Private / sensitive ---
+private/
+.env
+.env.local
+.env.*.local
+*.pem
+
+# --- Design references (internal only, not shipped) ---
+AGENT.md
+design.md
+design.html
+demo.html
+
+# --- Dependencies ---
+node_modules/
+.pnp
+.pnp.js
+
+# --- Next.js ---
+.next/
+out/
+build/
+dist/
+
+# --- Testing ---
+coverage/
+
+# --- Production ---
+*.tsbuildinfo
+next-env.d.ts
+
+# --- Debug / logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Editor / OS ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Vercel ---
+.vercel
+
+# --- Misc ---
+*.local
