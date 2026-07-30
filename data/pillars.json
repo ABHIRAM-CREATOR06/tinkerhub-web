@@ -1,0 +1,22 @@
+[
+  {
+    "num": "01",
+    "title": "Learning Paradigm",
+    "desc": "Shifting from traditional lectures to hands-on peer-learning study jams, build-alongs, and interactive workshops."
+  },
+  {
+    "num": "02",
+    "title": "Thriving Community",
+    "desc": "Creating an open space for hardware tinkerers, coders, design enthusiasts, and curious minds across all engineering departments."
+  },
+  {
+    "num": "03",
+    "title": "Empathy & Volunteering",
+    "desc": "Fostering an inclusive environment where senior makers mentor juniors and give back through open-source technology."
+  },
+  {
+    "num": "04",
+    "title": "Career Growth",
+    "desc": "Bridging the gap between academic theory and real-world industry skills, projects, hackathons, and internship opportunities."
+  }
+]

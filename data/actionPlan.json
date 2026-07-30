@@ -1,0 +1,47 @@
+[
+  {
+    "num": "01",
+    "title": "Skill Up",
+    "desc": "Join student-led study jams in Full Stack, AI, Cyber Security, and Hardware Tinkering.",
+    "links": [
+      { "label": "Study Jams ↗", "href": "/study-jam" },
+      { "label": "Resource Hub ↗", "href": "#resources" }
+    ]
+  },
+  {
+    "num": "02",
+    "title": "Build & Innovate",
+    "desc": "Participate in weekend hackathons and turn raw ideas into open-source GitHub repositories.",
+    "links": [
+      { "label": "Campus Repos ↗", "href": "https://github.com" },
+      { "label": "Project Showcase ↗", "href": "/spotlight" }
+    ]
+  },
+  {
+    "num": "03",
+    "title": "Connect & Grow",
+    "desc": "Engage with 500+ student makers, senior mentors, and statewide tech communities.",
+    "links": [
+      { "label": "Join WhatsApp Group ↗", "href": "#community" },
+      { "label": "Discord Server ↗", "href": "#discord" }
+    ]
+  },
+  {
+    "num": "04",
+    "title": "Learn & Lead",
+    "desc": "Step up as a campus lead, mentor study jams, and organize campus technical events.",
+    "links": [
+      { "label": "Become a Mentor ↗", "href": "#volunteer" },
+      { "label": "Lead Application ↗", "href": "#lead" }
+    ]
+  },
+  {
+    "num": "05",
+    "title": "Tinker & Shine",
+    "desc": "Demonstrate your innovations to industry leaders, win hackathons, and land career opportunities.",
+    "links": [
+      { "label": "Spotlight Wall ↗", "href": "/spotlight" },
+      { "label": "Success Stories ↗", "href": "#stories" }
+    ]
+  }
+]

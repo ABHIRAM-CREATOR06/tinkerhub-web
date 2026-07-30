@@ -1,0 +1,50 @@
+[
+  {
+    "id": "team-1",
+    "name": "Abhiram",
+    "role": "Campus Lead",
+    "tag": "FOUNDING LEAD",
+    "dept": "Computer Science & Engineering",
+    "image": "https://api.dicebear.com/7.x/bottts/svg?seed=Abhiram",
+    "gradient": "linear-gradient(135deg, #FF4FD1, #800860)",
+    "bio": "Passionate about building maker culture, open-source tech, and student communities.",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com"
+  },
+  {
+    "id": "team-2",
+    "name": "Sreehari Nandanan",
+    "role": "Tech & Hardware Lead",
+    "tag": "TECH LEAD",
+    "dept": "Electronics & Communication",
+    "image": "https://api.dicebear.com/7.x/bottts/svg?seed=Sreehari",
+    "gradient": "linear-gradient(135deg, #C6FF00, #384A00)",
+    "bio": "Hardware tinkerer, drone builder, and embedded systems enthusiast.",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com"
+  },
+  {
+    "id": "team-3",
+    "name": "Aksa Rose",
+    "role": "Community & Operations Lead",
+    "tag": "OPERATIONS",
+    "dept": "Electrical & Electronics",
+    "image": "https://api.dicebear.com/7.x/bottts/svg?seed=Aksa",
+    "gradient": "linear-gradient(135deg, #C9B8F5, #4A3A73)",
+    "bio": "Fostering peer-to-peer study jams and coordinating campus workshops.",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com"
+  },
+  {
+    "id": "team-4",
+    "name": "Joanne Alice Thomas",
+    "role": "Design & Media Lead",
+    "tag": "CREATIVE LEAD",
+    "dept": "Computer Science & Engineering",
+    "image": "https://api.dicebear.com/7.x/bottts/svg?seed=Joanne",
+    "gradient": "linear-gradient(135deg, #FF7E5F, #FEB47B)",
+    "bio": "Crafting visual identities, zine aesthetics, and campus graphics.",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com"
+  }
+]
