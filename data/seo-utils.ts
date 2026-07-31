@@ -5,7 +5,7 @@ interface PageMetadataOptions {
   description: string;
   path?: string;
   image?: string;
-  type?: "website" | "article" | "page";
+  type?: "website" | "article";
   keywords?: string[];
 }
 
