@@ -1,52 +1,142 @@
 [
   {
-    "id": "prev-1",
-    "date": "JUN 10 • 3:00 PM",
-    "title": "Python for AI Bootcamp",
-    "location": "CS Lab 1 • SNGCE",
-    "desc": "Two-day intensive covering Python fundamentals, NumPy, Pandas, and introductory ML pipelines using scikit-learn.",
+    "id": "event-1",
+    "date": "MAR 11 • 9:30 AM",
+    "title": "Robo Soccer",
+    "location": "Offline • SNGCE",
+    "desc": "A two-day robotics competition where participants designed, built, and competed with robotic soccer systems, promoting teamwork, problem-solving, and hands-on engineering experience.",
+    "category": "Competition",
+    "outcome": "54 participants • 2-day event",
+    "highlight": true
+  },
+  {
+    "id": "event-2",
+    "date": "FEB 26 • 8:00 PM",
+    "title": "Intro to Git and GitHub",
+    "location": "Online",
+    "desc": "An introductory workshop covering Git fundamentals, version control workflows, GitHub repositories, branching strategies, and collaboration through pull requests.",
     "category": "Workshop",
-    "outcome": "42 students completed",
-    "highlight": true
-  },
-  {
-    "id": "prev-2",
-    "date": "MAY 20 • 10:00 AM",
-    "title": "IoT & Smart Campus Hackathon",
-    "location": "ECE Hardware Lab • SNGCE",
-    "desc": "12-hour campus hackathon where teams prototyped IoT solutions for smart attendance, energy monitoring, and campus navigation.",
-    "category": "Hackathon",
-    "outcome": "8 teams • 3 winners",
-    "highlight": true
-  },
-  {
-    "id": "prev-3",
-    "date": "APR 12 • 2:00 PM",
-    "title": "Git & Open Source Foundations",
-    "location": "Seminar Hall • SNGCE",
-    "desc": "Hands-on session on Git branching, GitHub pull requests, and making first contributions to open-source repositories.",
-    "category": "Study Jam",
-    "outcome": "35 students onboarded",
+    "outcome": "12 participants",
     "highlight": false
   },
   {
-    "id": "prev-4",
-    "date": "MAR 05 • 4:30 PM",
-    "title": "UN Women Feature Showcase",
-    "location": "Main Auditorium • SNGCE",
-    "desc": "Campus showcase of student projects aligned with UN Women's goals — featuring five teams presenting gender-tech innovations.",
-    "category": "Showcase",
-    "outcome": "5 projects featured",
+    "id": "event-3",
+    "date": "FEB 25 • 8:00 PM",
+    "title": "Oru Project Breakdown Kadha",
+    "location": "Online",
+    "desc": "An interactive session where a complete student project was broken down into planning, architecture, development process, challenges, and lessons learned.",
+    "category": "Tech Talk",
+    "outcome": "13 participants",
+    "highlight": false
+  },
+  {
+    "id": "event-4",
+    "date": "FEB 20 • 9:00 AM",
+    "title": "Tink-Her-Hack",
+    "location": "Offline • SNGCE",
+    "desc": "A women-centric hackathon that brought together students to collaborate, build innovative solutions, and strengthen problem-solving, teamwork, and technical skills through an intensive day of hacking and mentorship.",
+    "category": "Hackathon",
+    "outcome": "47 participants",
     "highlight": true
   },
   {
-    "id": "prev-5",
-    "date": "FEB 18 • 9:00 AM",
-    "title": "React 19 Study Jam — Cohort 1",
-    "location": "CS Lab 2 • SNGCE",
-    "desc": "First cohort of the TinkerHub SNGCE Study Jam, focusing on React fundamentals, hooks, and component-based architecture.",
-    "category": "Study Jam",
-    "outcome": "28 graduates",
+    "id": "event-5",
+    "date": "FEB 11 • 8:00 PM",
+    "title": "Inside the Hall",
+    "location": "Online",
+    "desc": "A discussion session sharing practical hackathon experiences, preparation strategies, judging expectations, and teamwork insights from experienced participants.",
+    "category": "Experience Sharing",
+    "outcome": "10 participants",
+    "highlight": false
+  },
+  {
+    "id": "event-6",
+    "date": "JAN 10 • 7:00 PM",
+    "title": "SCAN HERE – A Session on QR Logic",
+    "location": "Online",
+    "desc": "A technical session exploring the fundamentals of QR codes, encoding techniques, error correction, and practical applications in modern software systems.",
+    "category": "Workshop",
+    "outcome": "19 participants",
+    "highlight": false
+  },
+  {
+    "id": "event-7",
+    "date": "JAN 06 • 8:00 PM",
+    "title": "O-Penn Mic Edition-2",
+    "location": "Online",
+    "desc": "A community open mic event where students showcased technical ideas, personal projects, creative talents, and shared experiences in an informal environment.",
+    "category": "Community",
+    "outcome": "15 participants",
+    "highlight": false
+  },
+  {
+    "id": "event-8",
+    "date": "DEC 22 • 7:00 PM",
+    "title": "AI Development Bootcamp",
+    "location": "Online",
+    "desc": "A three-day bootcamp introducing participants to AI application development, covering Python, machine learning basics, APIs, and hands-on project implementation.",
+    "category": "Bootcamp",
+    "outcome": "55 participants • 3-day event",
+    "highlight": true
+  },
+  {
+    "id": "event-9",
+    "date": "DEC 18 • 4:10 PM",
+    "title": "Charcha #2",
+    "location": "Offline • SNGCE",
+    "desc": "A core team discussion focused on planning upcoming initiatives, reviewing chapter progress, and coordinating responsibilities among organizers.",
+    "category": "Community",
+    "outcome": "2–4 core members",
+    "highlight": false
+  },
+  {
+    "id": "event-10",
+    "date": "OCT 21 • 8:00 PM",
+    "title": "O Pen Mic",
+    "location": "Online",
+    "desc": "A relaxed community event encouraging students to share stories, performances, creative ideas, and personal experiences with fellow members.",
+    "category": "Community",
+    "outcome": "4 participants",
+    "highlight": false
+  },
+  {
+    "id": "event-11",
+    "date": "OCT 01 • 7:00 PM",
+    "title": "HOW TO DESIGN!!",
+    "location": "Online",
+    "desc": "A beginner-friendly design session covering visual hierarchy, typography, color theory, layout principles, and practical design tools.",
+    "category": "Workshop",
+    "outcome": "6 participants",
+    "highlight": false
+  },
+  {
+    "id": "event-12",
+    "date": "SEP 01 • 7:00 PM",
+    "title": "Onam Vibes Bootcamp",
+    "location": "Online",
+    "desc": "A five-day festive learning bootcamp featuring technical sessions, collaborative activities, and project-building opportunities for students.",
+    "category": "Bootcamp",
+    "outcome": "47 participants • 5-day event",
+    "highlight": true
+  },
+  {
+    "id": "event-13",
+    "date": "AUG 01 • 3:45 PM",
+    "title": "Chaayayum Samsaaravum",
+    "location": "Offline • SNGCE",
+    "desc": "An informal community meetup where members connected over conversations, networking, and discussions about technology, ideas, and campus initiatives.",
+    "category": "Community",
+    "outcome": "7 participants",
+    "highlight": false
+  },
+  {
+    "id": "event-14",
+    "date": "JUL 11 • 3:45 PM",
+    "title": "Community Gathering",
+    "location": "Offline • SNGCE",
+    "desc": "A community onboarding and networking session bringing together students to introduce TinkerHub initiatives, meet fellow members, and plan future activities.",
+    "category": "Community",
+    "outcome": "12 participants",
     "highlight": false
   }
 ]
