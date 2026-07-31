@@ -212,7 +212,7 @@ a {
 
 .h-sub {
   font-family: var(--font-anton), sans-serif;
-  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
   letter-spacing: 0.03em;
   margin-bottom: 6px;
   text-transform: uppercase;
@@ -220,7 +220,7 @@ a {
 
 .pixel-headline {
   font-family: var(--font-pixel), monospace;
-  font-size: clamp(1.6rem, 6.2vw, 4.4rem);
+  font-size: clamp(2.2rem, 8vw, 5.8rem);
   line-height: 1.35;
   display: inline-block;
   position: relative;
