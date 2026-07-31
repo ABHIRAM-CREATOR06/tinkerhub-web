@@ -1,0 +1,102 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import { usePageShell } from "./PageShell";
+import LocalImage from "./LocalImage";
+
+const POLAROIDS = [
+  {
+    position: "card-1" as const,
+    label: "Maker of the Month",
+    by: "Sreehari Nandanan",
+    src: "/images/hero/maker-of-month.jpg",
+    gradient: "linear-gradient(135deg, #FF4FD1, #61184F)",
+    emoji: "🛠️",
+  },
+  {
+    position: "card-2" as const,
+    label: "Campus Chapter",
+    by: "SNGCE Kadayiruppu",
+    src: "/images/hero/campus.jpg",
+    gradient: "linear-gradient(135deg, #C6FF00, #2E4B00)",
+    emoji: "🏫",
+    rounded: true,
+  },
+];
+
+export default function Hero() {
+  const { openNav } = usePageShell();
+
+  return (
+    <section className="hero">
+      <button
+        type="button"
+        className="index-pill"
+        onClick={openNav}
+        aria-label="Open Navigation"
+      >
+        <span>INDEX ☰</span>
+      </button>
+
+      <div className="h-sub">
+        THE SPACE BETWEEN <i className="serif-italic" style={{ textTransform: "lowercase", fontSize: "1.15em", color: "var(--pink-vivid)" }}>&amp; beyond</i>
+      </div>
+
+      <h1 className="pixel-headline">
+        DREAM<span className="amp">&amp;</span>
+        <br />
+        REALITY
+      </h1>
+
+      <p className="desc">
+        TinkerHub SNGCE is a vibrant student maker community at SNG College of Engineering — empowering students with hands-on skills, study jams, open source culture, and peer-to-peer learning.
+      </p>
+
+      {/* Hero Quick Actions */}
+      <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap", margin: "24px 0 20px" }}>
+        <Link href="/study-jam" className="btn btn--solid btn--lg">
+          Study Jams ⚡
+        </Link>
+        <Link href="/events" className="btn btn--outline btn--lg">
+          Explore Events ↗
+        </Link>
+        <Link href="/resources" className="btn btn--outline btn--lg">
+          Resource Hub 📚
+        </Link>
+        <Link href="/whatsapp" className="btn btn--outline btn--lg" style={{ borderColor: "#25D366", color: "#1a8c4e" }}>
+          Join WhatsApp 💬
+        </Link>
+      </div>
+
+      <p className="fine">
+        SNGCE Chapter • Affiliated with TinkerHub Foundation Kerala (Reg No KKD/CA/478/2016)
+      </p>
+
+      {POLAROIDS.map((p) => (
+        <div key={p.position} className={`decor ${p.position}`}>
+          <div className="card">
+            <div className="pin"></div>
+            <div className="sunburst"></div>
+            <LocalImage
+              src={p.src}
+              alt={p.label}
+              gradient={p.gradient}
+              emoji={p.emoji}
+              shape={p.rounded ? "rounded" : "square"}
+              className="photo-circle"
+              style={p.rounded ? { borderRadius: "6px" } : undefined}
+            />
+            <div className="cap" style={p.rounded ? { fontSize: "0.95rem" } : undefined}>
+              {p.label}
+            </div>
+            <div className="by">{p.by}</div>
+          </div>
+        </div>
+      ))}
+
+      <div className="dot pink" style={{ top: "10px", left: "44%" }}></div>
+      <div className="dot lav" style={{ bottom: "40px", right: "38%" }}></div>
+    </section>
+  );
+}

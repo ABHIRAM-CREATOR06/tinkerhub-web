@@ -1,0 +1,135 @@
+[
+  {
+    "domain": "Computer Science",
+    "icon": "💻",
+    "color": "#C6FF00",
+    "resources": [
+      {
+        "id": "cs-1",
+        "title": "CS50x — Introduction to Computer Science",
+        "url": "https://cs50.harvard.edu/x/",
+        "desc": "Harvard's legendary CS intro course. Covers C, Python, SQL, and web fundamentals.",
+        "tag": "Free • Self-paced"
+      },
+      {
+        "id": "cs-2",
+        "title": "The Odin Project",
+        "url": "https://www.theodinproject.com/",
+        "desc": "Full-stack curriculum covering HTML, CSS, JavaScript, React, and Node.js through project-based learning.",
+        "tag": "Free • Project-based"
+      },
+      {
+        "id": "cs-3",
+        "title": "Next.js Official Docs",
+        "url": "https://nextjs.org/docs",
+        "desc": "Official Next.js documentation with tutorials, API reference, and App Router guides.",
+        "tag": "Docs • Official"
+      },
+      {
+        "id": "cs-4",
+        "title": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/",
+        "desc": "6,000+ hours of free coding challenges and certifications. Great for JS, Python, and data structures.",
+        "tag": "Free • Certification"
+      },
+      {
+        "id": "cs-5",
+        "title": "LeetCode — DSA Practice",
+        "url": "https://leetcode.com/",
+        "desc": "Industry-standard platform for data structures and algorithms practice and interview prep.",
+        "tag": "Practice • DSA"
+      },
+      {
+        "id": "cs-6",
+        "title": "Git & GitHub — Official Docs",
+        "url": "https://docs.github.com/en",
+        "desc": "Official GitHub documentation covering Git basics, Actions, and open-source contribution guides.",
+        "tag": "Docs • Version Control"
+      }
+    ]
+  },
+  {
+    "domain": "Electronics & Communication (ECE)",
+    "icon": "⚡",
+    "color": "#FF4FD1",
+    "resources": [
+      {
+        "id": "ece-1",
+        "title": "Arduino Official Learning Hub",
+        "url": "https://docs.arduino.cc/",
+        "desc": "Comprehensive guides for Arduino boards, shields, and projects — from beginner to advanced.",
+        "tag": "Free • Hardware"
+      },
+      {
+        "id": "ece-2",
+        "title": "ESP32 MicroPython Docs",
+        "url": "https://docs.micropython.org/en/latest/esp32/",
+        "desc": "Official MicroPython documentation for ESP32 microcontrollers, Wi-Fi, and IoT applications.",
+        "tag": "Docs • ESP32"
+      },
+      {
+        "id": "ece-3",
+        "title": "All About Circuits",
+        "url": "https://www.allaboutcircuits.com/",
+        "desc": "Free textbooks, technical articles, and calculators covering DC/AC circuits, digital logic, and more.",
+        "tag": "Free • Circuits"
+      },
+      {
+        "id": "ece-4",
+        "title": "Tinkercad Circuits",
+        "url": "https://www.tinkercad.com/circuits",
+        "desc": "Browser-based circuit simulator for building and testing Arduino and analog circuits virtually.",
+        "tag": "Free • Simulation"
+      },
+      {
+        "id": "ece-5",
+        "title": "NPTEL — ECE Courses",
+        "url": "https://nptel.ac.in/course.html?disciplineId=117",
+        "desc": "IIT/NIT ECE courses available free on NPTEL — covering signals, VLSI, communications, and embedded systems.",
+        "tag": "Free • NPTEL"
+      },
+      {
+        "id": "ece-6",
+        "title": "Hackster.io Projects",
+        "url": "https://www.hackster.io/",
+        "desc": "Thousands of hardware project tutorials from the maker community — Arduino, Raspberry Pi, and more.",
+        "tag": "Projects • Community"
+      }
+    ]
+  },
+  {
+    "domain": "AI & Machine Learning",
+    "icon": "🤖",
+    "color": "#C9B8F5",
+    "resources": [
+      {
+        "id": "ai-1",
+        "title": "fast.ai — Practical Deep Learning",
+        "url": "https://course.fast.ai/",
+        "desc": "Top-down, code-first deep learning course. Build real models from day one using PyTorch.",
+        "tag": "Free • Deep Learning"
+      },
+      {
+        "id": "ai-2",
+        "title": "Google ML Crash Course",
+        "url": "https://developers.google.com/machine-learning/crash-course",
+        "desc": "Google's free, self-paced ML course covering linear regression, neural networks, and TensorFlow.",
+        "tag": "Free • Google"
+      },
+      {
+        "id": "ai-3",
+        "title": "Hugging Face Courses",
+        "url": "https://huggingface.co/learn",
+        "desc": "Official courses on transformers, NLP, audio ML, and computer vision using the HF ecosystem.",
+        "tag": "Free • NLP"
+      },
+      {
+        "id": "ai-4",
+        "title": "Kaggle — Learn & Compete",
+        "url": "https://www.kaggle.com/learn",
+        "desc": "Free ML micro-courses and live competitions to build hands-on data science skills.",
+        "tag": "Free • Competitions"
+      }
+    ]
+  }
+]

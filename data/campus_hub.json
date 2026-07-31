@@ -1,0 +1,180 @@
+{
+  "categories": [
+    {
+      "id": "exec",
+      "label": "Executive Team",
+      "eyebrow": "Leadership",
+      "color": "#FF4FD1",
+      "members": [
+        {
+          "id": "exec-1",
+          "name": "Arya Venugopal",
+          "role": "Campus Lead",
+          "tag": "FOUNDING LEAD",
+          "dept": "Electronics & Communication",
+          "image": "/images/team/campus-lead.jpg",
+          "gradient": "linear-gradient(135deg, #FF4FD1, #800860)",
+          "bio": "Passionate about building maker culture, open-source tech, and student communities.",
+          "github": "https://github.com",
+          "linkedin": "https://www.linkedin.com/in/arya-venugopal-a-913b43368/"
+        },
+        {
+          "id": "exec-2",
+          "name": "Job K Varghese",
+          "role": "Learning Coordinator",
+          "tag": "TECH LEAD",
+          "dept": "Electronics & Communication",
+          "image": "/images/team/learning-coordinator.jpg",
+          "gradient": "linear-gradient(135deg, #C6FF00, #384A00)",
+          "bio": "Hardware tinkerer, drone builder, and embedded systems enthusiast.",
+          "github": "https://github.com",
+          "linkedin": "https://www.linkedin.com/in/job-k-varghese-802a29237/"
+        },
+        {
+          "id": "exec-3",
+          "name": "Meera Govind",
+          "role": "Women in Tech Lead",
+          "tag": "OPERATIONS",
+          "dept": "Computer Science & Engineering",
+          "image": "/images/team/women-in-tech-lead.jpg",
+          "gradient": "linear-gradient(135deg, #C9B8F5, #4A3A73)",
+          "bio": "Fostering peer-to-peer study jams and coordinating campus workshops.",
+          "github": "https://github.com/Mins-min",
+          "linkedin": "https://www.linkedin.com/in/meera-govind-249983350/"
+        },
+        {
+          "id": "exec-4",
+          "name": "Abid Salahudheen",
+          "role": "Outreach Lead",
+          "tag": "CREATIVE LEAD",
+          "dept": "Mechanical Engineering",
+          "image": "/images/team/outreach-lead.jpg",
+          "gradient": "linear-gradient(135deg, #FF7E5F, #FEB47B)",
+          "bio": "Crafting visual identities, zine aesthetics, and campus graphics.",
+          "github": "https://github.com",
+          "linkedin": "https://www.linkedin.com/in/abid-salahudheen5143/"
+        }
+      ]
+    },
+    {
+      "id": "tech",
+      "label": "Tech Team",
+      "eyebrow": "Build & Innovate",
+      "color": "#C6FF00",
+      "members": [
+        {
+          "id": "tech-1",
+          "name": "Rahul Krishnan",
+          "role": "Full Stack Developer",
+          "tag": "WEB TECH",
+          "dept": "Computer Science & Engineering",
+          "image": "/images/team/fullstack-developer.jpg",
+          "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
+          "bio": "Building open-source campus tools with Next.js and TypeScript.",
+          "github": "https://github.com",
+          "linkedin": "https://linkedin.com"
+        },
+        {
+          "id": "tech-2",
+          "name": "Sreehari Nandanan",
+          "role": "Embedded Systems",
+          "tag": "HARDWARE",
+          "dept": "Electronics & Communication",
+          "image": "/images/team/embedded-systems-lead.jpg",
+          "gradient": "linear-gradient(135deg, #FF4FD1, #61184F)",
+          "bio": "ESP32 & Arduino enthusiast. Building IoT prototypes for campus automation.",
+          "github": "https://github.com",
+          "linkedin": "https://linkedin.com"
+        },
+        {
+          "id": "tech-3",
+          "name": "Arun Prakash",
+          "role": "AI/ML Researcher",
+          "tag": "AI TRACK",
+          "dept": "Computer Science & Engineering",
+          "image": "/images/team/aiml-lead.jpg",
+          "gradient": "linear-gradient(135deg, #C9B8F5, #4A3A73)",
+          "bio": "Exploring LLMs, PyTorch, and practical AI deployments for student projects.",
+          "github": "https://github.com",
+          "linkedin": "https://linkedin.com"
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "label": "Community Team",
+      "eyebrow": "Connect & Grow",
+      "color": "#C9B8F5",
+      "members": [
+        {
+          "id": "com-1",
+          "name": "Divya Rajan",
+          "role": "Community Manager",
+          "tag": "COMMUNITY",
+          "dept": "Computer Science & Engineering",
+          "image": "/images/team/community-manager.jpg",
+          "gradient": "linear-gradient(135deg, #C9B8F5, #9B70D8)",
+          "bio": "Connecting makers, organising peer meetups, and growing the campus TinkerHub network.",
+          "github": "https://github.com",
+          "linkedin": "https://linkedin.com"
+        },
+        {
+          "id": "com-2",
+          "name": "Jithin Thomas",
+          "role": "Events Coordinator",
+          "tag": "EVENTS",
+          "dept": "Mechanical Engineering",
+          "image": "/images/team/events-coordinator.jpg",
+          "gradient": "linear-gradient(135deg, #FF7E5F, #FEB47B)",
+          "bio": "Planning and executing campus hackathons, workshops, and study jam sessions.",
+          "github": "https://github.com",
+          "linkedin": "https://linkedin.com"
+        },
+        {
+          "id": "com-3",
+          "name": "Nandana Suresh",
+          "role": "Social Media Lead",
+          "tag": "OUTREACH",
+          "dept": "Computer Science & Engineering",
+          "image": "/images/team/social-media-lead.jpg",
+          "gradient": "linear-gradient(135deg, #FF4FD1, #800860)",
+          "bio": "Managing TinkerHub SNGCE's social presence and amplifying student maker stories.",
+          "github": "https://github.com",
+          "linkedin": "https://linkedin.com"
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "label": "Creative Team",
+      "eyebrow": "Design & Brand",
+      "color": "#FFD166",
+      "members": [
+        {
+          "id": "cre-1",
+          "name": "Sreelakshmi K",
+          "role": "UI/UX Designer",
+          "tag": "DESIGN",
+          "dept": "Computer Science & Engineering",
+          "image": "/images/team/ui-ux-designer.jpg",
+          "gradient": "linear-gradient(135deg, #FFD166, #a05f00)",
+          "bio": "Designing zine-style interfaces and user experiences for campus tech projects.",
+          "github": "https://github.com",
+          "linkedin": "https://linkedin.com"
+        },
+        {
+          "id": "cre-2",
+          "name": "Muhammed Fariz",
+          "role": "Graphic Designer",
+          "tag": "VISUALS",
+          "dept": "Mechanical Engineering",
+          "image": "/images/team/graphic-designer.jpg",
+          "gradient": "linear-gradient(135deg, #C6FF00, #2E4B00)",
+          "bio": "Creating posters, event branding, and visual storytelling for campus maker events.",
+          "github": "https://github.com",
+          "linkedin": "https://linkedin.com"
+        }
+      ]
+    }
+  ]
+}

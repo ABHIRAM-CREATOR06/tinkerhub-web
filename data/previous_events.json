@@ -1,0 +1,52 @@
+[
+  {
+    "id": "prev-1",
+    "date": "JUN 10 • 3:00 PM",
+    "title": "Python for AI Bootcamp",
+    "location": "CS Lab 1 • SNGCE",
+    "desc": "Two-day intensive covering Python fundamentals, NumPy, Pandas, and introductory ML pipelines using scikit-learn.",
+    "category": "Workshop",
+    "outcome": "42 students completed",
+    "highlight": true
+  },
+  {
+    "id": "prev-2",
+    "date": "MAY 20 • 10:00 AM",
+    "title": "IoT & Smart Campus Hackathon",
+    "location": "ECE Hardware Lab • SNGCE",
+    "desc": "12-hour campus hackathon where teams prototyped IoT solutions for smart attendance, energy monitoring, and campus navigation.",
+    "category": "Hackathon",
+    "outcome": "8 teams • 3 winners",
+    "highlight": true
+  },
+  {
+    "id": "prev-3",
+    "date": "APR 12 • 2:00 PM",
+    "title": "Git & Open Source Foundations",
+    "location": "Seminar Hall • SNGCE",
+    "desc": "Hands-on session on Git branching, GitHub pull requests, and making first contributions to open-source repositories.",
+    "category": "Study Jam",
+    "outcome": "35 students onboarded",
+    "highlight": false
+  },
+  {
+    "id": "prev-4",
+    "date": "MAR 05 • 4:30 PM",
+    "title": "UN Women Feature Showcase",
+    "location": "Main Auditorium • SNGCE",
+    "desc": "Campus showcase of student projects aligned with UN Women's goals — featuring five teams presenting gender-tech innovations.",
+    "category": "Showcase",
+    "outcome": "5 projects featured",
+    "highlight": true
+  },
+  {
+    "id": "prev-5",
+    "date": "FEB 18 • 9:00 AM",
+    "title": "React 19 Study Jam — Cohort 1",
+    "location": "CS Lab 2 • SNGCE",
+    "desc": "First cohort of the TinkerHub SNGCE Study Jam, focusing on React fundamentals, hooks, and component-based architecture.",
+    "category": "Study Jam",
+    "outcome": "28 graduates",
+    "highlight": false
+  }
+]

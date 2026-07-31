@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "tag": "Maker of the month",
+    "name": "Sreehari Nandanan",
+    "story": "Went from breaking RCs to building his own autonomous drone controllers — one teardown at a time.",
+    "image": "/images/spotlight/1.jpg",
+    "bg": "linear-gradient(135deg, #FF4FD1, #800860)",
+    "gradient": "linear-gradient(135deg, #FF4FD1, #800860)",
+    "emoji": "🤖"
+  },
+  {
+    "id": "2",
+    "tag": "Volunteer spotlight",
+    "name": "Aksa Rose",
+    "story": "Builds before figuring it out — and brings the entire SNGCE campus along with her for study jams.",
+    "image": "/images/spotlight/2.jpg",
+    "bg": "linear-gradient(135deg, #C6FF00, #384A00)",
+    "gradient": "linear-gradient(135deg, #C6FF00, #384A00)",
+    "emoji": "💡"
+  },
+  {
+    "id": "3",
+    "tag": "Project spotlight",
+    "name": "Joanne Alice Thomas",
+    "story": "Started before she was ready, shipped anyway. Now leads a statewide open-source study track.",
+    "image": "/images/spotlight/3.jpg",
+    "bg": "linear-gradient(135deg, #C9B8F5, #4A3A73)",
+    "gradient": "linear-gradient(135deg, #C9B8F5, #4A3A73)",
+    "emoji": "🚀"
+  }
+]
