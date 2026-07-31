@@ -24,9 +24,31 @@
 <img src="https://img.shields.io/badge/chapter-SNGCE-C9B8F5?style=flat-square&labelColor=0A0A0A" alt="Chapter: SNGCE" />
 <img src="https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square&labelColor=0A0A0A" alt="License: MIT" />
 
-[Overview](#-overview) · [Features](#-features) · [Tech Stack](#-tech-stack) · [Design System](#-design-system) · [Getting Started](#-getting-started) · [Contributing](#-contributing) · [Roadmap](#-roadmap)
+[Live Site](#) · [Overview](#-overview) · [Features](#-features) · [Tech Stack](#-tech-stack) · [Design System](#-design-system) · [Getting Started](#-getting-started) · [Contributing](#-contributing) · [Roadmap](#-roadmap)
 
 </div>
+
+---
+
+**TinkerHub SNGCE** is the website for the Sree Narayana Gurukulam College of Engineering chapter of TinkerHub — a community of tinkerers, makers, and students building things together on campus. It's a scrapbook/zine-styled site: polaroid photo cards, pushpins, marquee tickers, and a full-screen nav overlay, built with Next.js.
+
+> *"Everyone has access to the knowledge required to set the course for a better future."*
+
+---
+
+## ✦ Contents
+
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Scripts](#-scripts)
+- [Project Structure](#-project-structure)
+- [Design System](#-design-system)
+- [Contributing](#-contributing)
+- [Roadmap](#-roadmap)
+- [Team](#-team)
+- [Deployment](#-deployment)
+- [License](#-license)
 
 ---
 
