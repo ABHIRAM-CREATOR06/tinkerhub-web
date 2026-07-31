@@ -46,14 +46,61 @@ const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tinkerhub-sngce.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "TinkerHub SNGCE — Student Maker Community",
   description: "Official campus chapter website for TinkerHub SNGCE. Empowering students with hands-on maker culture, study jams, open source, and technology learning in Kerala.",
-  keywords: ["TinkerHub", "SNGCE", "Maker Culture", "Study Jam", "Kerala", "Open Source", "Student Community"],
+  keywords: ["TinkerHub", "SNGCE", "Maker Culture", "Study Jam", "Kerala", "Open Source", "Student Community", "Tech Community", "Campus Club"],
+  authors: [{ name: "TinkerHub SNGCE" }],
+  creator: "TinkerHub SNGCE",
+  publisher: "TinkerHub SNGCE",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: siteUrl,
+    siteName: "TinkerHub SNGCE",
     title: "TinkerHub SNGCE — Student Maker Community",
     description: "Everyone has access to the knowledge required to set the course for a better future.",
-    type: "website",
+    images: [
+      {
+        url: `${siteUrl}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "TinkerHub SNGCE",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TinkerHub SNGCE — Student Maker Community",
+    description: "Empowering students with hands-on maker culture and technology learning",
+    creator: "@TinkerHubSNGCE",
+    images: [`${siteUrl}/og-image.jpg`],
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
   },
 };
 
@@ -64,6 +111,42 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${pressStart2P.variable} ${anton.variable} ${playfairDisplay.variable} ${specialElite.variable} ${caveat.variable} ${poppins.variable} ${instrumentSerif.variable}`}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="author" content="TinkerHub SNGCE" />
+        <meta name="og:type" content="website" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "TinkerHub SNGCE",
+              url: siteUrl,
+              logo: `${siteUrl}/logo.png`,
+              description: "Student Maker Community at SNGCE, Kerala",
+              sameAs: [
+                "https://twitter.com/TinkerHubSNGCE",
+                "https://discord.gg/tinkerhub",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "IN",
+                addressRegion: "Kerala",
+                addressLocality: "Kottayam",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "General",
+                url: siteUrl,
+              },
+            }),
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
