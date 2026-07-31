@@ -100,8 +100,9 @@ describe('LocalImage Component', () => {
   });
 
   it('trims whitespace from alt text for initials', () => {
-    render(<LocalImage alt="  Jane Smith  " />);
-    const fallback = screen.getByLabelText('  Jane Smith  ');
+    const { container } = render(<LocalImage alt="  Jane Smith  " />);
+    const fallback = container.querySelector('[aria-label="  Jane Smith  "]');
+    expect(fallback).toBeInTheDocument();
     expect(fallback).toHaveTextContent('J');
   });
 });
