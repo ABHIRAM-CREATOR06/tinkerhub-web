@@ -22,9 +22,9 @@
 <img src="https://img.shields.io/badge/PRs-welcome-C6FF00?style=flat-square&labelColor=0A0A0A" alt="PRs welcome" />
 <img src="https://img.shields.io/badge/status-active-FF4FD1?style=flat-square&labelColor=0A0A0A" alt="Status: active" />
 <img src="https://img.shields.io/badge/chapter-SNGCE-C9B8F5?style=flat-square&labelColor=0A0A0A" alt="Chapter: SNGCE" />
-<img src="https://img.shields.io/badge/license-TBD-lightgrey?style=flat-square&labelColor=0A0A0A" alt="License: TBD" />
+<img src="https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square&labelColor=0A0A0A" alt="License: MIT" />
 
-[Live Site](#) · [Design System](#-design-system) · [Contributing](#-contributing) · [Roadmap](#-roadmap)
+[Live Site](#) · [Overview](#-overview) · [Features](#-features) · [Tech Stack](#-tech-stack) · [Design System](#-design-system) · [Getting Started](#-getting-started) · [Contributing](#-contributing) · [Roadmap](#-roadmap)
 
 </div>
 
@@ -52,157 +52,166 @@
 
 ---
 
-## ✦ Features
+## 🌟 Overview
 
-- 📌 **Polaroid-style spotlight cards** — pinned, rotated maker/volunteer/project shoutouts for the campus community
-- 📣 **Marquee ticker banner** — hot-pink scrolling announcement strip with sparkle separators
-- 🗂️ **Full-screen nav overlay** — large italic-serif menu instead of a slim header bar
-- ☀️ **Sunburst photo treatment** — lavender ray graphics behind circular member photos
-- 🖋️ **Deliberately mixed typography** — pixel display font, condensed caps, italic serif, stencil stickers, script captions, all used with intent
-- 📅 **Events section** — upcoming campus events pulled into a scannable list
-- 🤝 **Get Involved CTAs** — Donate / Volunteer / Start a Campus style action cards, scoped to this chapter
+**TinkerHub SNGCE** is built to bridge the gap between technology education and practical implementation. This web application serves as the centralized digital platform for student makers at Sree Narayana Gurukulam College of Engineering, offering learning resources, event registrations, community spotlights, and study jam tracks.
 
 ---
 
-## ✦ Tech Stack
+## ✨ Features
 
-| | |
-|---|---|
-| **Framework** | Next.js (App Router) |
-| **Language** | TypeScript |
-| **Styling** | CSS Modules / Tailwind *(confirm before contributing — see `AGENT.md`)* |
-| **Fonts** | Google Fonts via `next/font` (Press Start 2P, Anton, Playfair Display, Special Elite, Caveat, Poppins) |
-| **Deployment** | TBD — see [Deployment](#-deployment) |
+- 🚀 **Dynamic Homepage**: Interactive maker ethos, four core pillars, community impact statistics, core team roster, and live study jam announcements.
+- ⚡ **Study Jams (`/study-jam`)**: Dedicated peer-to-peer technology learning circles and hands-on track modules.
+- 📅 **Events Hub (`/events`)**: Detailed listing of upcoming workshops, hackathons, registration workflows, and an archive of past community events.
+- 🧰 **Resource Hub (`/resources`)**: Curated directory of developer guides, learning roadmaps, tools, and study materials.
+- 🌟 **Maker Spotlight (`/spotlight`)**: Highlights outstanding student projects, maker achievements, and community stories.
+- 🏫 **Campus Hub (`/campus`)**: Detailed information on the SNGCE campus chapter, team, and vision.
+- 💬 **Community Access Portals (`/whatsapp`, `/discord`)**: Seamless entry points to official WhatsApp & Discord channels.
+- ✉️ **Interactive Contact Modal**: Embedded registration and contact flow for event enrollment and general inquiries.
 
 ---
 
-## ✦ Getting Started
+## 🛠 Tech Stack
 
-**Prerequisites:** Node.js 18+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router, TypeScript)
+- **UI & View Layer**: [React 19](https://react.dev/)
+- **Language**: [TypeScript 5](https://www.typescriptlang.org/)
+- **Styling & Fonts**: Modern typography with Google Fonts (`Press Start 2P`, `Anton`, `Playfair Display`, `Special Elite`, `Caveat`, `Poppins`, `Instrument Serif`), dark mode glassmorphism, & micro-animations
+- **Content Architecture**: Data-driven JSON schema design (`/data/*.json`)
+- **Code Quality**: ESLint 9
+
+---
+
+## 🎨 Design System
+
+The platform features a distinct, maker-focused aesthetic with rich typography and dynamic interactive elements:
+
+- **Retro & Modern Typography**: Combines pixel fonts (`Press Start 2P`), bold headlines (`Anton`), serif accents (`Playfair Display`, `Instrument Serif`), and clean body text (`Poppins`).
+- **Four Core Pillars**: Focus on Learn, Build, Share, and Empower.
+- **Micro-Animations**: Scroll reveals, interactive cursor effects, hover states, and smooth overlays.
+
+---
+
+## 📁 Directory Structure
+
+```text
+tinkerhub-web/
+├── app/                  # Next.js App Router pages & layouts
+│   ├── campus/           # Campus Hub page
+│   ├── discord/          # Discord community portal page
+│   ├── events/           # Events & Workshops page
+│   ├── resources/        # Resource Hub page
+│   ├── spotlight/        # Maker Spotlight page
+│   ├── study-jam/        # Study Jams page
+│   ├── whatsapp/         # WhatsApp community portal page
+│   ├── globals.css       # Global styles & font CSS variables
+│   ├── layout.tsx        # Root layout with fonts & metadata
+│   └── page.tsx          # Homepage root component
+├── components/           # Reusable UI components
+│   ├── ActionPlan.tsx    # Maker community action plan
+│   ├── ContactModal.tsx  # Interactive contact & registration modal
+│   ├── CoreTeam.tsx      # Core team member display grid
+│   ├── EventsSection.tsx # Event showcase component
+│   ├── Hero.tsx          # Hero section with animated elements
+│   ├── NavOverlay.tsx    # Fullscreen navigation menu overlay
+│   ├── ResourceHub.tsx   # Curated resource catalog grid
+│   └── ...               # Additional section components
+├── data/                 # JSON files powering dynamic content
+│   ├── actionPlan.json   # Action plan steps & timeline
+│   ├── campus_hub.json   # Campus chapter info & leads
+│   ├── coreTeam.json     # Core team details & socials
+│   ├── events.json       # Upcoming event schedules & links
+│   ├── previous_events.json # Past events archive
+│   ├── resources.json    # Curated learning resources
+│   ├── spotlights.json   # Student project spotlights
+│   ├── studyJams.json    # Active & upcoming Study Jams
+│   └── ...               # Additional configuration JSONs
+├── public/               # Static assets & images
+└── next.config.ts        # Next.js configuration
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have **Node.js** (v18.0.0 or higher) and **npm** installed on your system.
 
 ```bash
-git clone <repo-url>
-cd tinkerhub-sngce
-npm install
-npm run dev
+node -v
+npm -v
 ```
 
-Open **[localhost:3000](http://localhost:3000)** 🚀
+### Installation
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/ABHIRAM-CREATOR06/tinkerhub-web.git
+   cd tinkerhub-web
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
 ---
 
-## ✦ Scripts
+## 📜 Available Scripts
 
-| Command | What it does |
-|---|---|
-| `npm run dev` | Start local dev server |
-| `npm run build` | Create a production build |
-| `npm run start` | Serve the production build locally |
-| `npm run lint` | Run the linter |
+In the project directory, you can run:
 
----
-
-## ✦ Project Structure
-
-```
-tinkerhub-sngce/
-├── app/                    # routes (App Router)
-│   ├── page.tsx            # homepage — hero, spotlight, events, get involved
-│   ├── events/              # events listing + detail pages
-│   └── layout.tsx
-├── components/
-│   ├── Marquee.tsx          # ticker banner
-│   ├── NavOverlay.tsx       # full-screen nav menu
-│   ├── SpotlightCard.tsx    # pinned polaroid-style member card
-│   ├── SpotlightColumn.tsx  # vertical stack of SpotlightCards
-│   ├── ActionPlanRow.tsx    # numbered "how we bring it to life" rows
-│   ├── EventRow.tsx
-│   └── GetInvolvedCard.tsx
-├── public/                  # static assets — images, favicon
-├── private/                  # local-only content/config — never committed
-├── design.md                 # design system source of truth (gitignored)
-├── demo.html                  # static prototype of the design system (gitignored)
-├── AGENT.md                   # AI coding agent conventions (gitignored)
-├── .gitignore
-└── README.md
-```
+- `npm run dev`: Starts the Next.js development server.
+- `npm run build`: Compiles and builds the production application.
+- `npm run start`: Runs the built application in production mode.
+- `npm run lint`: Runs ESLint to check for code quality and syntax issues.
 
 ---
 
-## ✦ Design System
+## 📊 Managing Site Content
 
-<div align="center">
-<img src="https://img.shields.io/badge/%23FFFFFF-FFFFFF?style=flat-square&labelColor=FFFFFF&color=FFFFFF" height="28"/>
-<img src="https://img.shields.io/badge/%230A0A0A-0A0A0A?style=flat-square&labelColor=0A0A0A&color=0A0A0A" height="28"/>
-<img src="https://img.shields.io/badge/%23FF4FD1-FF4FD1?style=flat-square&labelColor=FF4FD1&color=FF4FD1" height="28"/>
-<img src="https://img.shields.io/badge/%23C6FF00-C6FF00?style=flat-square&labelColor=C6FF00&color=C6FF00" height="28"/>
-<img src="https://img.shields.io/badge/%23C9B8F5-C9B8F5?style=flat-square&labelColor=C9B8F5&color=C9B8F5" height="28"/>
-<img src="https://img.shields.io/badge/%236B6B6B-6B6B6B?style=flat-square&labelColor=6B6B6B&color=6B6B6B" height="28"/>
-</div>
+Site content is decoupled from components and stored as JSON files inside the [`data/`](./data) directory. You can update website content without modifying component code:
 
-TinkerHub SNGCE follows a **scrapbook / zine** aesthetic, not a minimal corporate one:
-
-| Layer | Choice |
-|---|---|
-| Base | White `#FFFFFF` background, near-black `#0A0A0A` ink |
-| Accents | Hot pink `#FF4FD1`, lime `#C6FF00`, lavender `#C9B8F5` — used sparingly, as punctuation |
-| Display font | Pixel/8-bit (Press Start 2P) — reserved for the single biggest hero statement |
-| Headline font | Bold condensed caps (Anton) — ticker text, supporting headlines |
-| Nav font | Italic serif (Playfair Display) — large-scale primary navigation |
-| Sticker font | Distressed stencil (Special Elite) — "BE KIND.", "GET INVOLVED" callouts |
-| Caption font | Script (Caveat) — handwritten-feel photo captions |
-| Body font | Clean geometric sans (Poppins) — wordmark and body copy |
-
-Full component reference lives in `design.md` and the rendered prototype `demo.html` — both intentionally kept out of version control (see `.gitignore`). Ask a maintainer for access.
+| File | Description |
+| :--- | :--- |
+| `data/events.json` | Manage upcoming events, dates, descriptions, and registration forms |
+| `data/studyJams.json` | Update active and upcoming Study Jam tracks and details |
+| `data/resources.json` | Add or update learning resources, links, and categories |
+| `data/coreTeam.json` | Update campus core team roster and social links |
+| `data/spotlights.json` | Feature new student projects and maker stories |
 
 ---
 
-## ✦ Contributing
+## 🗺️ Roadmap
 
-1. Fork or branch from `main`.
-2. Follow the conventions in `AGENT.md` (request access if you don't have it).
-3. Open a PR with a short description and, if it's a visual change, a screenshot.
-
-We're a student community — first-time contributors welcome. 🤝
-
----
-
-## ✦ Roadmap
-
-- [x] Design system defined (`design.md`)
-- [x] Static HTML prototype (`demo.html`)
-- [x] Nav overlay + marquee ticker components
-- [x] Campus Spotlight column
-- [ ] Homepage build in Next.js
-- [ ] Events listing + detail pages
-- [ ] Get Involved / Donate flow
-- [ ] Real campus member photos + copy
-- [ ] Deployment pipeline
-- [ ] Analytics / basic SEO pass
+- [x] Initial release of TinkerHub SNGCE Web Platform
+- [x] Study Jam tracks & Resource Hub implementation
+- [x] WhatsApp & Discord community hubs integration
+- [ ] Direct project submission portal for Student Spotlights
+- [ ] Interactive event calendar & reminder subscriptions
 
 ---
 
-## ✦ Team
+## 🤝 Contributing
 
-Built by **TinkerHub SNGCE** makers.
+Contributions are always welcome! If you'd like to improve the site or add features:
 
-| Name | Role |
-|---|---|
-| — | — |
-| — | — |
-
-*(Fill in your chapter's core team here.)*
-
----
-
-## ✦ Deployment
-
-*(Fill in once decided — e.g. Vercel, Netlify.)*
-
-## ✦ License
-
-*(Add a license, or note this is an internal chapter project if not open source.)*
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
 
 ---
 
-<div align="center"><sub>made with ✦ by TinkerHub SNGCE — the space between dream & reality</sub></div>
+## 💚 Acknowledgments
+
+- **TinkerHub Foundation** — Inspiring tech learning and maker culture across Kerala.
+- **TinkerHub SNGCE Chapter** — Sree Narayana Gurukulam College of Engineering.
