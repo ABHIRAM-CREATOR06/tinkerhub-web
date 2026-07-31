@@ -1,81 +1,159 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
-import NavOverlay from "@/components/NavOverlay";
-import ContactModal from "@/components/ContactModal";
-import Footer from "@/components/Footer";
+import React from "react";
+import PageShell from "@/components/PageShell";
+import PageHeader from "@/components/PageHeader";
+import BackHomeLink from "@/components/BackHomeLink";
+import LocalImage from "@/components/LocalImage";
+import campusHubData from "@/data/campus_hub.json";
 
-export default function CampusPage() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
-
-  const leads = [
-    { name: "Campus Lead", role: "Overall Coordinator", dept: "Computer Science & Engineering" },
-    { name: "Tech Lead", role: "Study Jam & Workshop Coordinator", dept: "Electronics & Communication" },
-    { name: "Design & Media Lead", role: "Scrapbook & Creative Direction", dept: "Electrical & Electronics" },
-    { name: "Community Lead", role: "Outreach & Mentorship", dept: "Mechanical Engineering" },
-  ];
-
+function MemberCard({ member, idx }: { member: (typeof campusHubData.categories)[number]["members"][number]; idx: number }) {
   return (
-    <main className="dotgrid">
-      <div style={{ padding: "40px 6vw", textAlign: "center" }}>
-        <button type="button" className="index-pill" onClick={() => setIsNavOpen(true)}>
-          INDEX ☰
-        </button>
+    <div
+      className="spot-card"
+      style={{
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "center",
+        transform: idx % 2 === 0 ? "rotate(-1deg)" : "rotate(1.2deg)",
+        padding: "24px 20px",
+      }}
+    >
+      <div className="spot-pin"></div>
 
-        <div className="eyebrow" style={{ marginTop: "20px" }}>SNGCE Chapter</div>
-        <h1 className="pixel-headline" style={{ fontSize: "clamp(1.8rem, 5vw, 3.5rem)" }}>
-          CAMPUS HUB
-        </h1>
-        <p className="desc" style={{ marginTop: "20px" }}>
-          SNG College of Engineering (SNGCE) Kadayiruppu campus chapter is run by passionate student makers, mentors, and innovators across engineering streams.
+      <LocalImage
+        src={member.image}
+        alt={member.name}
+        gradient={member.gradient}
+        className="team-avatar"
+      />
+
+      <div className="spot-body" style={{ textAlign: "center" }}>
+        <div className="tag">{member.tag}</div>
+        <h4 style={{ fontSize: "1.7rem", margin: "4px 0" }}>{member.name}</h4>
+        <p
+          style={{
+            fontFamily: "var(--font-anton)",
+            fontSize: "0.95rem",
+            color: "var(--ink)",
+            marginBottom: "4px",
+          }}
+        >
+          {member.role}
+        </p>
+        <p style={{ fontSize: "0.78rem", color: "var(--gray)", marginBottom: "8px" }}>
+          📍 {member.dept}
+        </p>
+        <p style={{ fontSize: "0.85rem", color: "#444", lineHeight: "1.4" }}>
+          {member.bio}
         </p>
 
-        <section className="ref" style={{ marginTop: "40px", borderTop: "2px solid var(--ink)", textAlign: "left" }}>
-          <div className="eyebrow">Chapter Executive Team</div>
-          <h2 className="ref-title">Student Leads & Council</h2>
-
-          <div className="pillars-grid" style={{ marginTop: "24px" }}>
-            {leads.map((lead, idx) => (
-              <div className="pillar-card" key={idx}>
-                <div className="pillar-num">[SNGCE LEAD]</div>
-                <h3>{lead.name}</h3>
-                <p style={{ fontWeight: 600, color: "var(--ink)", marginBottom: "4px" }}>{lead.role}</p>
-                <p style={{ fontSize: "0.82rem", color: "var(--gray)" }}>{lead.dept}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <div style={{ marginTop: "50px", textAlign: "center" }}>
-          <button
-            type="button"
-            className="btn-solid"
-            style={{ padding: "14px 28px", marginRight: "16px" }}
-            onClick={() => setIsContactOpen(true)}
-          >
-            Connect with Campus Leads ✉️
-          </button>
-          <Link href="/" className="btn-outline" style={{ display: "inline-block", padding: "12px 24px" }}>
-            ← Back to Home
-          </Link>
+        <div className="team-socials">
+          <a href={member.github} target="_blank" rel="noreferrer" className="team-social-link">
+            GitHub ↗
+          </a>
+          <a href={member.linkedin} target="_blank" rel="noreferrer" className="team-social-link">
+            LinkedIn ↗
+          </a>
         </div>
       </div>
+    </div>
+  );
+}
 
-      <Footer />
+function CampusTeamSection() {
+  const { categories } = campusHubData;
 
-      <NavOverlay
-        isOpen={isNavOpen}
-        onClose={() => setIsNavOpen(false)}
-        onOpenContact={() => setIsContactOpen(true)}
+  return (
+    <div style={{ padding: "0 6vw" }}>
+      {categories.map((cat) => (
+        <div key={cat.id} style={{ marginBottom: "60px" }}>
+          {/* Category header */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "14px",
+              paddingTop: "48px",
+              borderTop: "2px solid var(--ink)",
+              marginBottom: "28px",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-special)",
+                fontSize: "0.78rem",
+                fontWeight: "bold",
+                background: cat.color,
+                padding: "4px 12px",
+                border: "1.5px solid var(--ink)",
+                borderRadius: "4px",
+                textTransform: "uppercase",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {cat.eyebrow}
+            </span>
+            <h2
+              style={{
+                fontFamily: "var(--font-anton)",
+                fontSize: "clamp(1.4rem, 3vw, 2rem)",
+                margin: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.01em",
+              }}
+            >
+              {cat.label}
+            </h2>
+            <span
+              style={{
+                fontFamily: "var(--font-special)",
+                fontSize: "0.75rem",
+                color: "var(--gray)",
+                marginLeft: "auto",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {cat.members.length} member{cat.members.length !== 1 ? "s" : ""}
+            </span>
+          </div>
+
+          {/* Members grid */}
+          <div className="core-team-grid">
+            {cat.members.map((member, idx) => (
+              <MemberCard key={member.id} member={member} idx={idx} />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function CampusActions() {
+  return (
+    <div className="page-actions" style={{ paddingBottom: "60px" }}>
+      <a
+        href="mailto:tinkerhub.in.sngce@gmail.com"
+        className="btn btn--solid btn--lg"
+      >
+        Connect to the team ✉️
+      </a>
+      <BackHomeLink />
+    </div>
+  );
+}
+
+export default function CampusPage() {
+  return (
+    <PageShell>
+      <PageHeader
+        eyebrow="SNGCE Chapter"
+        title="CAMPUS HUB"
+        description="SNG College of Engineering (SNGCE) Kadayiruppu campus chapter is run by passionate student makers, mentors, and innovators across engineering streams."
       />
-
-      <ContactModal
-        isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
-        initialTopic="Campus Chapter Inquiry"
-      />
-    </main>
+      <CampusTeamSection />
+      <CampusActions />
+    </PageShell>
   );
 }

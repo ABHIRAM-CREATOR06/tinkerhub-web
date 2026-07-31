@@ -2,10 +2,13 @@
 
 import React from "react";
 import actionPlanData from "@/data/actionPlan.json";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function ActionPlan() {
+  const sectionRef = useScrollReveal<HTMLElement>();
+
   return (
-    <section className="ref" id="action-plan">
+    <section className="ref reveal" id="action-plan" ref={sectionRef}>
       <div className="eyebrow">02 — Roadmap</div>
       <h2 className="ref-title">SNGCE Campus Action Plan</h2>
 

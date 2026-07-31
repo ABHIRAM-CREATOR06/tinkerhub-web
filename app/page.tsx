@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import PageShell from "@/components/PageShell";
+import { usePageShell } from "@/components/PageShell";
 import Marquee from "@/components/Marquee";
 import Hero from "@/components/Hero";
 import DreamReality from "@/components/DreamReality";
@@ -10,25 +12,15 @@ import Spotlight from "@/components/Spotlight";
 import EventsSection from "@/components/EventsSection";
 import CoreTeam from "@/components/CoreTeam";
 import GetInvolved from "@/components/GetInvolved";
-import NavOverlay from "@/components/NavOverlay";
-import ContactModal from "@/components/ContactModal";
-import Footer from "@/components/Footer";
 
-export default function Home() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
-  const [contactTopic, setContactTopic] = useState("General Inquiry");
-
-  const handleOpenContact = (topic: string = "General Inquiry") => {
-    setContactTopic(topic);
-    setIsContactOpen(true);
-  };
+function HomeBody() {
+  const { openContact } = usePageShell();
 
   return (
-    <main className="dotgrid">
-      <Marquee onLinkClick={() => handleOpenContact("UN Women Feature / Study Jam")} />
+    <>
+      <Marquee linkHref="/study-jam" linkText="EXPLORE STUDY JAMS ⚡" />
 
-      <Hero onOpenNav={() => setIsNavOpen(true)} />
+      <Hero />
 
       <DreamReality />
 
@@ -38,25 +30,19 @@ export default function Home() {
 
       <Spotlight />
 
-      <EventsSection onRegister={(eventName) => handleOpenContact(`Registration: ${eventName}`)} />
+      <EventsSection onRegister={(eventName) => openContact(`Registration: ${eventName}`)} />
 
       <CoreTeam />
 
-      <GetInvolved onOpenContact={handleOpenContact} />
+      <GetInvolved onOpenContact={openContact} />
+    </>
+  );
+}
 
-      <Footer />
-
-      <NavOverlay
-        isOpen={isNavOpen}
-        onClose={() => setIsNavOpen(false)}
-        onOpenContact={() => handleOpenContact("Nav Contact Us")}
-      />
-
-      <ContactModal
-        isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
-        initialTopic={contactTopic}
-      />
-    </main>
+export default function Home() {
+  return (
+    <PageShell>
+      <HomeBody />
+    </PageShell>
   );
 }

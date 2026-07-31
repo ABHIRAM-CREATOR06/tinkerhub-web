@@ -29,27 +29,25 @@ export default function NavOverlay({ isOpen, onClose, onOpenContact }: NavOverla
       </div>
 
       <nav className="nav-items">
-        <Link href="/" onClick={onClose}>Home</Link>
-        <Link href="/study-jam" onClick={onClose}>Study Jam</Link>
-        <Link href="/events" onClick={onClose}>Learning Activities</Link>
-        <Link href="/spotlight" onClick={onClose}>Spotlight</Link>
-        <Link href="/campus" onClick={onClose}>Campus</Link>
+        <Link href="/" onClick={onClose} prefetch>Home</Link>
+        <Link href="/study-jam" onClick={onClose} prefetch>Study Jams</Link>
+        <Link href="/events" onClick={onClose} prefetch>Events</Link>
+        <Link href="/spotlight" onClick={onClose} prefetch>Spotlight</Link>
+        <Link href="/campus" onClick={onClose} prefetch>Campus Hub</Link>
+        <Link href="/resources" onClick={onClose} prefetch>Resource Hub</Link>
       </nav>
 
       <div className="nav-bottom">
         <button type="button" className="btn-outline" onClick={onClose}>
           Close ✕
         </button>
-        <button
-          type="button"
+        <a
+          href="mailto:tinkerhub.in.sngce@gmail.com"
           className="btn-solid"
-          onClick={() => {
-            onClose();
-            onOpenContact();
-          }}
+          style={{ textDecoration: "none", display: "inline-flex", alignItems: "center" }}
         >
-          Contact us
-        </button>
+          Contact us ✉️
+        </a>
       </div>
 
       <div className="sticky-note">

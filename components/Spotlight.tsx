@@ -2,6 +2,7 @@
 
 import React from "react";
 import spotlightsData from "@/data/spotlights.json";
+import LocalImage from "./LocalImage";
 
 export default function Spotlight() {
   return (
@@ -15,19 +16,14 @@ export default function Spotlight() {
         {spotlightsData.map((item) => (
           <div className="spot-card" key={item.id}>
             <div className="spot-pin"></div>
-            <div className="spot-photo" style={{ background: item.bg }}>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: "100%",
-                  fontSize: "1.4rem",
-                }}
-              >
-                {item.emoji}
-              </div>
-            </div>
+            <LocalImage
+              src={item.image}
+              alt={item.name}
+              gradient={item.gradient ?? item.bg}
+              emoji={item.emoji}
+              className="spot-photo"
+              imgStyle={{ borderRadius: "50%" }}
+            />
             <div className="spot-body">
               <div className="tag">{item.tag}</div>
               <h4>{item.name}</h4>

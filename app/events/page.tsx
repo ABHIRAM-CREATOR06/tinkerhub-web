@@ -1,51 +1,31 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import React from "react";
+import PageShell from "@/components/PageShell";
+import PageHeader from "@/components/PageHeader";
+import BackHomeLink from "@/components/BackHomeLink";
 import EventsSection from "@/components/EventsSection";
-import NavOverlay from "@/components/NavOverlay";
-import ContactModal from "@/components/ContactModal";
-import Footer from "@/components/Footer";
+import { usePageShell } from "@/components/PageShell";
+
+function EventsBody() {
+  const { openContact } = usePageShell();
+  return (
+    <>
+      <EventsSection
+        onRegister={(eventName) => openContact(`Registration: ${eventName}`)}
+      />
+      <div className="page-actions" style={{ marginBottom: "60px" }}>
+        <BackHomeLink />
+      </div>
+    </>
+  );
+}
 
 export default function EventsPage() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
-  const [contactTopic, setContactTopic] = useState("Event Registration");
-
   return (
-    <main className="dotgrid">
-      <div style={{ padding: "40px 6vw", textAlign: "center" }}>
-        <button type="button" className="index-pill" onClick={() => setIsNavOpen(true)}>
-          INDEX ☰
-        </button>
-      </div>
-
-      <EventsSection
-        onRegister={(eventName) => {
-          setContactTopic(`Registration: ${eventName}`);
-          setIsContactOpen(true);
-        }}
-      />
-
-      <div style={{ textAlign: "center", margin: "40px 0 60px" }}>
-        <Link href="/" className="btn-outline" style={{ display: "inline-block", padding: "12px 24px" }}>
-          ← Back to Home
-        </Link>
-      </div>
-
-      <Footer />
-
-      <NavOverlay
-        isOpen={isNavOpen}
-        onClose={() => setIsNavOpen(false)}
-        onOpenContact={() => setIsContactOpen(true)}
-      />
-
-      <ContactModal
-        isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
-        initialTopic={contactTopic}
-      />
-    </main>
+    <PageShell>
+      <PageHeader eyebrow="What's On" title="EVENTS" description="Hands-on workshops, study jams, and campus hackathons happening at TinkerHub SNGCE — past, present, and upcoming." />
+      <EventsBody />
+    </PageShell>
   );
 }

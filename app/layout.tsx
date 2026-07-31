@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Press_Start_2P, Anton, Playfair_Display, Special_Elite, Caveat, Poppins } from "next/font/google";
+import { Press_Start_2P, Anton, Playfair_Display, Special_Elite, Caveat, Poppins, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const pressStart2P = Press_Start_2P({
@@ -39,6 +39,13 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-instrument",
+});
+
 export const metadata: Metadata = {
   title: "TinkerHub SNGCE — Student Maker Community",
   description: "Official campus chapter website for TinkerHub SNGCE. Empowering students with hands-on maker culture, study jams, open source, and technology learning in Kerala.",
@@ -56,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${pressStart2P.variable} ${anton.variable} ${playfairDisplay.variable} ${specialElite.variable} ${caveat.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${pressStart2P.variable} ${anton.variable} ${playfairDisplay.variable} ${specialElite.variable} ${caveat.variable} ${poppins.variable} ${instrumentSerif.variable}`}>
       <body>{children}</body>
     </html>
   );

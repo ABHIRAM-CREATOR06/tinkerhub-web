@@ -47,7 +47,12 @@ export default function ContactModal({ isOpen, onClose, initialTopic = "General 
         ) : (
           <form onSubmit={handleSubmit}>
             <h3>Contact TinkerHub SNGCE</h3>
-            <p>Fill out this form to connect with our campus leads and team.</p>
+            <p>
+              Fill out this form to connect to the team, or write to us directly at{" "}
+              <a href="mailto:tinkerhub.in.sngce@gmail.com" style={{ color: "var(--pink)", textDecoration: "underline" }}>
+                tinkerhub.in.sngce@gmail.com
+              </a>.
+            </p>
 
             <div className="form-group">
               <label>Topic / Purpose</label>

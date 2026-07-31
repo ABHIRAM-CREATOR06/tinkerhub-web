@@ -1,55 +1,40 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import React from "react";
+import PageShell from "@/components/PageShell";
+import PageHeader from "@/components/PageHeader";
+import BackHomeLink from "@/components/BackHomeLink";
 import Spotlight from "@/components/Spotlight";
-import NavOverlay from "@/components/NavOverlay";
-import ContactModal from "@/components/ContactModal";
-import Footer from "@/components/Footer";
+import { usePageShell } from "@/components/PageShell";
 
-export default function SpotlightPage() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isContactOpen, setIsContactOpen] = useState(false);
-
+function SpotlightBody() {
+  const { openContact } = usePageShell();
   return (
-    <main className="dotgrid">
-      <div style={{ padding: "40px 6vw", textAlign: "center" }}>
-        <button type="button" className="index-pill" onClick={() => setIsNavOpen(true)}>
-          INDEX ☰
-        </button>
-      </div>
-
+    <>
       <Spotlight />
-
-      <div style={{ textAlign: "center", marginBottom: "60px" }}>
+      <div className="page-actions" style={{ marginBottom: "60px" }}>
         <button
           type="button"
-          className="btn-solid"
-          style={{ padding: "14px 28px", fontSize: "0.95rem" }}
-          onClick={() => setIsContactOpen(true)}
+          className="btn btn--solid btn--lg"
+          onClick={() => openContact("Spotlight Nomination")}
         >
           Nominate a Maker for Spotlight ✦
         </button>
-        <div style={{ marginTop: "20px" }}>
-          <Link href="/" className="btn-outline" style={{ display: "inline-block", padding: "10px 20px" }}>
-            ← Back to Home
-          </Link>
-        </div>
+        <BackHomeLink />
       </div>
+    </>
+  );
+}
 
-      <Footer />
-
-      <NavOverlay
-        isOpen={isNavOpen}
-        onClose={() => setIsNavOpen(false)}
-        onOpenContact={() => setIsContactOpen(true)}
+export default function SpotlightPage() {
+  return (
+    <PageShell>
+      <PageHeader
+        eyebrow="Stories"
+        title="SPOTLIGHT"
+        description="The makers, mentors, and projects shaping student culture at TinkerHub SNGCE."
       />
-
-      <ContactModal
-        isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
-        initialTopic="Spotlight Nomination"
-      />
-    </main>
+      <SpotlightBody />
+    </PageShell>
   );
 }

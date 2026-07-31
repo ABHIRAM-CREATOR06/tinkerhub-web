@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import Link from "next/link";
 
 interface MarqueeProps {
   text?: string;
@@ -11,16 +11,25 @@ interface MarqueeProps {
 
 export default function Marquee({
   text = "WE GOT FEATURED BY UN WOMEN ✦ TINKERHUB SNGCE STUDY JAM IS LIVE",
-  linkText = "CHECK IT OUT",
+  linkText = "EXPLORE STUDY JAMS ⚡",
+  linkHref = "/study-jam",
   onLinkClick,
 }: MarqueeProps) {
+  const linkElement = linkHref ? (
+    <Link href={linkHref} style={{ color: "inherit", textDecoration: "underline" }}>
+      {linkText}
+    </Link>
+  ) : (
+    <u style={{ cursor: "pointer" }} onClick={onLinkClick}>{linkText}</u>
+  );
+
   const content = (
     <>
       <span>
-        ✦ {text} ✦ <u style={{ cursor: "pointer" }} onClick={onLinkClick}>{linkText}</u> ✦ {text} ✦ <u style={{ cursor: "pointer" }} onClick={onLinkClick}>{linkText}</u> ✦
+        ✦ {text} ✦ {linkElement} ✦ {text} ✦ {linkElement} ✦
       </span>
       <span>
-        ✦ {text} ✦ <u style={{ cursor: "pointer" }} onClick={onLinkClick}>{linkText}</u> ✦ {text} ✦ <u style={{ cursor: "pointer" }} onClick={onLinkClick}>{linkText}</u> ✦
+        ✦ {text} ✦ {linkElement} ✦ {text} ✦ {linkElement} ✦
       </span>
     </>
   );

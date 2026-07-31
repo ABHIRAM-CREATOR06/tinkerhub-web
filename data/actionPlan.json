@@ -5,7 +5,7 @@
     "desc": "Join student-led study jams in Full Stack, AI, Cyber Security, and Hardware Tinkering.",
     "links": [
       { "label": "Study Jams ↗", "href": "/study-jam" },
-      { "label": "Resource Hub ↗", "href": "#resources" }
+      { "label": "Resource Hub ↗", "href": "/resources" }
     ]
   },
   {
@@ -13,7 +13,7 @@
     "title": "Build & Innovate",
     "desc": "Participate in weekend hackathons and turn raw ideas into open-source GitHub repositories.",
     "links": [
-      { "label": "Campus Repos ↗", "href": "https://github.com" },
+      { "label": "Campus Repos ↗", "href": "https://github.com/tinkerhub-sngce" },
       { "label": "Project Showcase ↗", "href": "/spotlight" }
     ]
   },
@@ -22,8 +22,8 @@
     "title": "Connect & Grow",
     "desc": "Engage with 500+ student makers, senior mentors, and statewide tech communities.",
     "links": [
-      { "label": "Join WhatsApp Group ↗", "href": "#community" },
-      { "label": "Discord Server ↗", "href": "#discord" }
+      { "label": "Join WhatsApp Group ↗", "href": "/whatsapp" },
+      { "label": "Discord Server ↗", "href": "/discord" }
     ]
   },
   {
@@ -31,8 +31,7 @@
     "title": "Learn & Lead",
     "desc": "Step up as a campus lead, mentor study jams, and organize campus technical events.",
     "links": [
-      { "label": "Become a Mentor ↗", "href": "#volunteer" },
-      { "label": "Lead Application ↗", "href": "#lead" }
+      { "label": "Become a Mentor ↗", "href": "#volunteer" }
     ]
   },
   {

@@ -2,21 +2,28 @@
 
 import React from "react";
 import coreTeamData from "@/data/coreTeam.json";
+import LocalImage from "./LocalImage";
 
-export default function CoreTeam() {
+interface CoreTeamProps {
+  /** Override the small label above the title. Defaults to the home-page label. */
+  eyebrow?: string;
+  /** Override the section title. Defaults to the home-page title. */
+  title?: string;
+  /** Override the section id (for in-page anchors). */
+  id?: string;
+}
+
+export default function CoreTeam({
+  eyebrow = "04 — Leadership",
+  title = "SNGCE Core Chapter Team",
+  id = "team",
+}: CoreTeamProps) {
   return (
-    <section className="ref" id="team">
-      <div className="eyebrow">04 — Leadership</div>
-      <h2 className="ref-title">SNGCE Core Chapter Team</h2>
+    <section className="ref" id={id}>
+      <div className="eyebrow">{eyebrow}</div>
+      <h2 className="ref-title">{title}</h2>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: "28px",
-          marginTop: "36px",
-        }}
-      >
+      <div className="core-team-grid">
         {coreTeamData.map((member, idx) => (
           <div
             key={member.id}
@@ -30,29 +37,13 @@ export default function CoreTeam() {
             }}
           >
             <div className="spot-pin"></div>
-            
-            {/* Photo / Avatar with Sunburst */}
-            <div
-              className="spot-photo"
-              style={{
-                width: "90px",
-                height: "90px",
-                background: member.gradient,
-                marginBottom: "12px",
-              }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={member.image}
-                alt={member.name}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
+
+            <LocalImage
+              src={member.image}
+              alt={member.name}
+              gradient={member.gradient}
+              className="team-avatar"
+            />
 
             <div className="spot-body" style={{ textAlign: "center" }}>
               <div className="tag">{member.tag}</div>
@@ -74,21 +65,12 @@ export default function CoreTeam() {
                 {member.bio}
               </p>
 
-              <div
-                style={{
-                  marginTop: "14px",
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: "12px",
-                  fontFamily: "var(--font-special)",
-                  fontSize: "0.78rem",
-                }}
-              >
+              <div className="team-socials">
                 <a
                   href={member.github}
                   target="_blank"
                   rel="noreferrer"
-                  style={{ textDecoration: "underline", color: "var(--ink)", fontWeight: "bold" }}
+                  className="team-social-link"
                 >
                   GitHub ↗
                 </a>
@@ -96,7 +78,7 @@ export default function CoreTeam() {
                   href={member.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  style={{ textDecoration: "underline", color: "var(--ink)", fontWeight: "bold" }}
+                  className="team-social-link"
                 >
                   LinkedIn ↗
                 </a>
