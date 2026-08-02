@@ -181,7 +181,8 @@ a {
 /* HERO */
 .hero {
   position: relative;
-  padding: 60px 6vw 90px;
+  /* tightened vertical spacing to accommodate larger headline */
+  padding: 40px 6vw 60px;
   text-align: center;
 }
 
@@ -224,13 +225,14 @@ a {
 
 .pixel-headline {
   font-family: var(--font-pixel), monospace;
-  /* much larger headline to dominate the hero */
-  font-size: clamp(3.6rem, 12vw, 14rem);
-  line-height: 0.98;
+  /* emphasized larger and tighter headline */
+  font-size: clamp(4.8rem, 16vw, 20rem);
+  line-height: 0.88;
   display: inline-block;
   position: relative;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.06em;
   text-transform: none;
+  margin: 0.25em 0;
 }
 
 .pixel-headline .amp {
@@ -238,12 +240,12 @@ a {
   font-style: italic;
   font-weight: 700;
   color: var(--lime);
-  -webkit-text-stroke: 4px var(--ink);
-  font-size: 2.6em;
-  margin: 0 0.12em;
+  -webkit-text-stroke: 3px var(--ink);
+  font-size: 2.2em;
+  margin: 0 0.08em;
   display: inline-block;
-  transform: translateY(-0.02em) rotate(-6deg);
-  filter: drop-shadow(0 2px 0 rgba(0,0,0,0.45));
+  transform: translateY(0) rotate(-4deg);
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,0.35));
 }
 
 .hero p.desc {
